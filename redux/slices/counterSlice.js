@@ -4,14 +4,17 @@ import { createSlice } from '@reduxjs/toolkit'
 /* Instruments */
 import { incrementAsync } from './thunks'
 
-const initialState = {
-  value: 0,
-  status: 'idle',
-}
+// const initialState = {
+//   value: 0,
+//   status: 'idle',
+// }
 
 export const counterSlice = createSlice({
   name: 'counter',
-  initialState,
+  initialState: {
+    value: 0,
+    status: 'idle',
+  },
   // The `reducers` field lets us define reducers and generate associated actions
   reducers: {
     increment: (state) => {
@@ -43,6 +46,6 @@ export const counterSlice = createSlice({
   },
 })
 export const { increment, decrement, incrementByAmount } = counterSlice.actions
+export const selectCount = (state) => state.counter.value
 
 export default counterSlice.reducer
-
