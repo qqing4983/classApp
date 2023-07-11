@@ -30,11 +30,11 @@ async function TodoPage({
 }
 export default TodoPage
 
-export async function generateStaticParams(){
-    const res = await fetch("https://jsonplaceholder.typicode.com/todos/")
-    const todos= await res.json();
-    const ycc=todos.splice(0,10)
-    return ycc.map((todo)=>({
-        todoId:todo.id.toString(),
-    }))
-}             
+// export async function generateStaticParams(){
+//     const res = await fetch("https://jsonplaceholder.typicode.com/todos/")
+//     const todos= await res.json();
+//     const ycc=todos.splice(0,10)
+//     return ycc.map((todo)=>({
+//         todoId:todo.id.toString(),
+//     }))
+// }             

@@ -55,20 +55,6 @@ const TodoList = () => {
                     </ListItem>
                 )
             })}
-                {/* <ListItem >
-                    <ListItemText primary="Inbox" />
-                </ListItem>
-                <Divider />
-                <ListItem  divider>
-                    <ListItemText primary="Drafts" />
-                </ListItem>
-                <ListItem >
-                    <ListItemText primary="Trash" />
-                </ListItem>
-                <Divider light />
-                <ListItem >
-                    <ListItemText primary="Spam" />
-                </ListItem> */}
             </List>
         </Box>
     )
