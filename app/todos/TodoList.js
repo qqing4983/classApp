@@ -40,6 +40,7 @@ const fetcher = (url) => fetch(url).then((res) => res.json());
 const TodoList = () => {
     const { data, error } = useSWR(`${url}`, fetcher)
     if (error) return <div>failed to load</div>
+    if (!data) return 'Loading...'
     return (
         <Box
             sx={{ width: '100%', height: 800, maxWidth: 360, bgcolor: 'background.paper' ,overflowY:'scroll'}}

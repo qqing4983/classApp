@@ -13,7 +13,7 @@ export const counterSlice = createSlice({
   name: 'counter',
   initialState: {
     value: 0,
-    status: 'idle',
+    status: 'fulfilled',
   },
   // The `reducers` field lets us define reducers and generate associated actions
   reducers: {
@@ -40,7 +40,7 @@ export const counterSlice = createSlice({
         state.status = 'loading'
       })
       .addCase(incrementAsync.fulfilled, (state, action) => {
-        state.status = 'idle'
+        state.status = 'fulfilled'
         state.value += action.payload
       })
   },

@@ -9,8 +9,7 @@ import {notFound} from 'next/navigation'
     const todos = await res.json();
     return todos;
  };
-async function TodoPage({
-    params: {todoId}}) {
+async function TodoPage({params: {todoId}}) {
         console.log(todoId,'todoId')
         const todo=await fetchTodo(todoId);
         if(!todo.id) return notFound()
