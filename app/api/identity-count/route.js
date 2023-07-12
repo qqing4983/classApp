@@ -61,10 +61,8 @@ const userList=[{
   "completed": true
 },]
 export async function POST(req, res) {
-  const body = await req.json()
-  const { amount = 1 } = body;
-  console.log(req.json(),'req')
-
+  const body1 = await req.json()
+  const { amount = 1 } = body1;
   // simulate IO latency
   await new Promise((r) => setTimeout(r, 500))
 

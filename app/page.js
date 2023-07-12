@@ -2,7 +2,7 @@
 import { Button, Grid, Stack,Typography } from "@mui/material";
 import { useSelector, useDispatch } from 'react-redux'
 import { increment, decrement, incrementByAmount, selectCount } from '@/redux/slices/counterSlice'
-import {incrementAsync} from '@/redux/slices/thunks'
+import {incrementAsync,incrementIfOddAsync} from '@/redux/slices/thunks'
 import Link from 'next/link'
 import Image from 'next/image'
 export default function Home() {

@@ -24,8 +24,7 @@ export const incrementAsync = createAsyncThunk(
 export const incrementIfOddAsync =
   (amount) =>
   (dispatch, getState) => {
-    const currentValue = getState().counter
-
+    const currentValue = getState().counter.value
     if (currentValue % 2 === 1) {
       dispatch(counterSlice.actions.incrementByAmount(amount))
     }
