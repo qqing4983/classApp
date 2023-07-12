@@ -15,28 +15,6 @@ const style = {
   };
 const url = 'https://jsonplaceholder.typicode.com/todos/'
 const fetcher = (url) => fetch(url).then((res) => res.json());
-// function renderRow(props) {
-//     const { index, style } = props;
-//     const { data, error } = useSWR(`${url}`, fetcher)
-//     if (error) return <div>failed to load</div>
-//     return (
-//         <>
-//             {data && data.map((todo, index) => {
-//                 return (
-//                     <ListItem component="div" disablePadding key={index}>
-//                         <Link href={`/todos/${todo.id}`}>
-//                             <ListItemButton>
-//                                 <ListItemText primary={`Todo ${todo.id}`} />
-//                             </ListItemButton></Link>
-//                     </ListItem>
-//                 )
-//             })}
-//         </>
-//     )
-
-
-
-// }
 const TodoList = () => {
     const { data, error } = useSWR(`${url}`, fetcher)
     if (error) return <div>failed to load</div>
