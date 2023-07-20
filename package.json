@@ -9,6 +9,7 @@
   "dependencies": {
     "@emotion/react": "latest",
     "@emotion/styled": "latest",
+    "@mui/icons-material": "^5.14.1",
     "@mui/material": "latest",
     "@mui/x-charts": "latest",
     "@mui/x-data-grid": "latest",
@@ -16,6 +17,7 @@
     "autoprefixer": "10.4.14",
     "next": "13.4.9",
     "postcss": "8.4.25",
+    "rc-bullets": "^1.5.16",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-redux": "^8.1.1",

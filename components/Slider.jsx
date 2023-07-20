@@ -18,22 +18,22 @@ const Slider1 = () => {
     return (
         <Slider {...settings}>
             <div className='SliderImg'>
-                <h3>1</h3>
+            <img src="/1.jpg"  className='w-full h-full object-cover rounded-xl'/>
             </div>
             <div className='SliderImg'>
-                <h3>2</h3>
+            <img src="/1.jpg"  className='w-full h-full object-cover rounded-xl'/>
             </div>
             <div className='SliderImg'>
-                <h3>3</h3>
+            <img src="/1.jpg"  className='w-full h-full object-cover rounded-xl'/>
             </div>
             <div className='SliderImg'>
-                <h3>4</h3>
+            <img src="/1.jpg"  className='w-full h-full object-cover rounded-xl'/>
             </div>
             <div className='SliderImg'>
-                <h3>5</h3>
+            <img src="/1.jpg"  className='w-full h-full object-cover rounded-xl'/>
             </div>
             <div className='SliderImg'>
-                <h3>6</h3>
+            <img src="/1.jpg"  className='w-full h-full object-cover rounded-xl'/>
             </div>
         </Slider>
     )
