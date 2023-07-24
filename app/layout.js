@@ -7,7 +7,15 @@ const inter = Inter({ subsets: ['latin'] })
 import { Providers } from '@/redux/providers'
 import {theme} from './theme/themes'
 import { ThemeProvider, CssBaseline, Switch, FormControlLabel } from "@mui/material";
+import {resizeListener} from '@utils/rem.js'
+import { useEffect, useState } from 'react';
 export default function RootLayout({ children }) {
+  useEffect(() => {
+    resizeListener()
+    window.addEventListener('resize', resizeListener);
+    return () => window.removeEventListener('resize', resizeListener);
+  },[]);
+
   return (
     <Providers>
       <html lang="en">
@@ -22,7 +30,7 @@ export default function RootLayout({ children }) {
           <CssBaseline />
           <div className="desktop">
             <Nav />
-            <div className='container'>
+            <div className='container1'>
               {children}
             </div>
             <Footer />

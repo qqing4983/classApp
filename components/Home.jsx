@@ -5,11 +5,15 @@ import Box from '@mui/material/Box';
 import Slider from './Slider';
 import { Typography, Grid, Paper, Avatar } from '@mui/material';
 import Image from 'next/image'
-import flower from '@public/flower.svg'
-import redFlag from '@public/redFlag.svg'
+import flower from '@public/flower.png'
+import redFlag from '@public/redFlag.png'
 import flower1 from '@public/flower1.jpg'
 import Bullets from './Bullets';
+import classIcon from '@public/classIcon.png'
+import redFlag1 from '@public/redFlag1.png'
+import flowerIcon from '@public/flowerIcon.png'
 import LinearWithValueLabel from './LinearProgressWithLabel'
+import commuteIcon from '@public/commuteIcon.png'
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
   ...theme.typography.body2,
@@ -20,87 +24,92 @@ const Item = styled(Paper)(({ theme }) => ({
 const Home = () => {
   return (
     <div>
-
-      <Box sx={{ height: '353px', overflow: 'hidden' }}>
-        <Grid container spacing={{ lg: 2, md: 8 }}>
-          <Grid item lg={3} md={4}>
+      <Box sx={{ height: '34rem', overflow: 'hidden' }}>
+        <Grid container>
+          <Grid item sx={{ width: '30.43rem' }}>
             <div className=''>
-              <Grid item lg={12} >
+              <Grid item >
                 <div className='classInformation'>
                   <div className='classInformation_left'>
-                    <Typography variant="h5" gutterBottom sx={{ fontWeight: 'bold', marginBottom: '0.3em' }}>
-                      五年级3班
+                    <Typography variant="h5" gutterBottom sx={{ fontSize: '1.875rem', marginBottom: '0.3em', display: 'flex', alignItems: 'center' }}>
+                      <Image src={classIcon} alt="classIcon" sx={{ width: '2.12rem', height: '1.75rem' }} />&nbsp;五年级3班
                     </Typography>
-                    <Typography variant="body2" gutterBottom sx={{ marginTop: '8px' }}>
-                      班主任：王美人
-                    </Typography>
-                    <div className='flex items-center'>
-                      <Image src={flower} alt="flower" className="h-6 w-6" />
-                      <span className='ml-2'>126</span>
-                      <Image src={redFlag} alt="flower" className="h-6 w-6 ml-6" />
-                      <span className='ml-2'>3</span>
+                    <div className='flex mt-7'>
+                      <Avatar alt="Avatar" src="/Avatar.png" sx={{ width: '4rem', height: '4rem' }} />
+                      <div className='ml-3.5'>
+                        <Typography variant="h5" gutterBottom >
+                          班主任：王美人
+                        </Typography>
+                        <div className='flex items-center mt-5'>
+                          <Image src={flower} alt="flower" className="h-6 w-6" />
+                          <span className='ml-2'>126</span>
+                          <Image src={redFlag} alt="flower" className="h-6 w-6 ml-6" />
+                          <span className='ml-2'>3</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <div className='classInformation_right'></div>
+                  <Image src={redFlag1} alt="flower" className="classInformation_right" />
                 </div>
               </Grid>
-              <Grid item lg={12}>
+              <Grid item >
                 <div className='safflowerRanking'>
-                  <Typography variant="body2" gutterBottom sx={{ textAlign: 'center' }}>
-                    本周红花榜
+                  <Typography variant="h5" gutterBottom sx={{ fontSize: '1.875rem', marginBottom: '0.3em', display: 'flex', alignItems: 'center' }}>
+                    <Image src={flowerIcon} alt="classIcon" sx={{ width: '2.12rem', height: '1.75rem' }} />&nbsp;本周红花榜TOP3
                   </Typography>
-                  <ul className='safflowerRankingList'>
-                    <li className='flex justify-between items-center mb-2'>
-                      <div className='flex items-center'> <Image src={flower1} alt="flower" className="h-5 w-5 mr-2" />
-                        <Avatar alt="Avatar" src="/Avatar.png" sx={{ width: 46, height: 46 }} /><span className='ml-2.5'>李晓莉</span></div>
-                      <span>7朵</span>
+                  <ul className='safflowerRankingList mt-7'>
+                    <li className='flex justify-between items-center mb-3'>
+                      <div className='flex items-center'>
+                        <Avatar alt="Avatar" src="/Avatar.png" sx={{ width: '4rem', height: '4rem' }} /><span className='ml-2.5'>李晓莉</span></div>
+                      <span className='flex items-center'>7朵&nbsp;&nbsp;<Image src={flower} alt="flower" className="h-6 w-6" /></span>
                     </li>
-                    <li className='flex justify-between items-center mb-2'>
-                      <div className='flex items-center'> <Image src={flower1} alt="flower" className="h-5 w-5 mr-2" />
-                        <Avatar alt="Avatar" src="/Avatar.png" sx={{ width: 46, height: 46 }} /><span className='ml-2.5'>李晓莉</span></div>
-                      <span>5朵</span>
+                    <li className='flex justify-between items-center mb-3'>
+                      <div className='flex items-center'>
+                        <Avatar alt="Avatar" src="/Avatar.png" sx={{ width: '4rem', height: '4rem' }} /><span className='ml-2.5'>李晓莉</span></div>
+                      <span className='flex items-center'>5朵&nbsp;&nbsp;<Image src={flower} alt="flower" className="h-6 w-6" /></span>
                     </li>
-                    <li className='flex justify-between items-center mb-2'>
-                      <div className='flex items-center'> <Image src={flower1} alt="flower" className="h-5 w-5 mr-2" />
-                        <Avatar alt="Avatar" src="/Avatar.png" sx={{ width: 46, height: 46 }} /><span className='ml-2.5'>李晓莉</span></div>
-                      <span>3朵</span>
+                    <li className='flex justify-between items-center mb-3'>
+                      <div className='flex items-center'>
+                        <Avatar alt="Avatar" src="/Avatar.png" sx={{ width: '4rem', height: '4rem' }} /><span className='ml-2.5'>李晓莉</span></div>
+                      <span className='flex items-center'>3朵&nbsp;&nbsp;<Image src={flower} alt="flower" className="h-6 w-6" /></span>
                     </li>
                   </ul>
                 </div>
               </Grid>
             </div>
           </Grid>
-          <Grid item lg={6.5} md={5}>
+          <Grid item sx={{ width: '60.18rem', marginLeft: '1.7rem', marginRight: '1.7rem', }}>
             <div className='slick relative overflow-hidden'>
               <Bullets />
               <Slider />
             </div>
           </Grid>
-          <Grid item lg={2.5} md={3}>
+          <Grid item sx={{ width: '20.81rem' }}>
             <div className='slick'>
-              <Typography variant="body2" gutterBottom sx={{ marginTop: '8px', textAlign: 'center', marginBottom: '24px' }}>
+              <Typography variant="body2" gutterBottom sx={{ fontSize: '1.875rem', textAlign: 'center', color: 'rgb(60, 60, 60)', marginBottom: '2.87rem' }}>
                 传音螺
               </Typography>
+
               <ul className='informationList'>
                 <li className='flex mb-3.5'>
-                  <Avatar alt="Avatar" src="/Avatar.png" sx={{ width: 46, height: 46 }} />
-                  <Typography variant="subtitle2" gutterBottom className='flex flex-col ml-2 leading-[1.8]'>
-                    <span className='font-bold text-black'>张三妈妈</span>
-                    <span className='overflow-hidden text-ellipsis whitespace-nowrap w-32'>孩子，你在星期天还是去刘姥姥家吧</span>
+                  <Avatar alt="Avatar" src="/Avatar.png" sx={{ width: '4rem', height: '4rem' }} />
+                  <Typography variant="subtitle2" gutterBottom className='flex flex-col ml-3 leading-[1.8]'>
+                    <span className='text-2xl text-neutral-700'>张三妈妈</span>
+                    <span className='informationText'>孩子，你在星期天还是去刘姥姥家吧</span>
                   </Typography>
                 </li>
                 <li className='flex mb-3.5'>
-                  <Avatar alt="Avatar" src="/Avatar.png" sx={{ width: 46, height: 46 }} />
-                  <Typography variant="subtitle2" gutterBottom className='flex flex-col ml-2 leading-[1.8]'>
-                    <span className='font-bold text-black'>张三妈妈</span>
-                    <span className='overflow-hidden text-ellipsis whitespace-nowrap w-32'>孩子，你在星期天还是去刘姥姥家吧</span>
+                  <Avatar alt="Avatar" src="/Avatar.png" sx={{ width: '4rem', height: '4rem' }} />
+                  <Typography variant="subtitle2" gutterBottom className='flex flex-col ml-3 leading-[1.8]'>
+                    <span className='text-2xl text-neutral-700'>张三妈妈</span>
+                    <span className='informationText'>孩子，你在星期天还是去刘姥姥家吧</span>
                   </Typography>
                 </li>
                 <li className='flex mb-3.5'>
-                  <Avatar alt="Avatar" src="/Avatar.png" sx={{ width: 46, height: 46 }} />
-                  <Typography variant="subtitle2" gutterBottom className='flex flex-col ml-2 leading-[1.8]'>
-                    <span className='font-bold text-black'>张三妈妈</span>
-                    <span className='overflow-hidden text-ellipsis whitespace-nowrap w-32'>孩子，你在星期天还是去刘姥姥家吧</span>
+                  <Avatar alt="Avatar" src="/Avatar.png" sx={{ width: '4rem', height: '4rem' }} />
+                  <Typography variant="subtitle2" gutterBottom className='flex flex-col ml-3 leading-[1.8]'>
+                    <span className='text-2xl text-neutral-700'>张三妈妈</span>
+                    <span className='informationText'>孩子，你在星期天还是去刘姥姥家吧</span>
                   </Typography>
                 </li>
               </ul>
@@ -108,15 +117,15 @@ const Home = () => {
           </Grid>
         </Grid>
       </Box>
-      <Box sx={{ height: '103px', overflow: 'hidden', marginTop: '19px' }}>
-        <Grid container spacing={{ lg: 2, md: 8 }}>
-          <Grid item lg={3} md={4}>
-            <div className='slick progressHeight '>
-              <Typography variant="body2" gutterBottom sx={{}}>
-                今日通勤率
+      <Box sx={{ height: '10.875rem', overflow: 'hidden', marginTop: '1.1rem' }}>
+        <Grid container >
+          <Grid sx={{ width: '30.43rem', borderRadius: '0.56rem' }}>
+            <div className='slick  '>
+              <Typography variant="h5" gutterBottom sx={{ fontSize: '1.875rem', marginBottom: '0.3em', display: 'flex', alignItems: 'center' }}>
+                <Image src={commuteIcon} alt="flower" className="h-6 w-6 mr-2.5" />今日通勤率
               </Typography>
-              <LinearWithValueLabel color="LinearProgress" />
-              <Typography variant="body2" gutterBottom className='mt-1'>
+              <LinearWithValueLabel />
+              <Typography variant="body2" gutterBottom className='mt-6 commuteText '>
                 <span>总人数：</span>
                 <span>45</span>
                 <span className='ml-5'>请假：</span>
@@ -124,13 +133,80 @@ const Home = () => {
               </Typography>
             </div>
           </Grid>
-          <Grid item lg={6.5} md={5}>
-            <div className='slick progressHeight'>
-
+          <Grid sx={{ width: '60.18rem', marginLeft: '1.7rem', marginRight: '1.7rem', borderRadius: '0.56rem' }}>
+            <div className='slick course flex items-center'>
+              <div className='courseLeft flex items-center'>
+                <Avatar alt="Avatar" src="/Avatar.png" sx={{ width: '4rem', height: '4rem' }} />
+                <ul className='ml-3'>
+                  <li className='text-2xl'>老师姓名</li>
+                  <li className='text-lg'>正在上课</li>
+                  <li className='text-2xl'>语文</li>
+                </ul>
+              </div>
+              <div className='courseRight '>
+                <ul className='courseList flex'>
+                  <li>
+                    <Typography gutterBottom>
+                      第1节课
+                    </Typography>
+                    <Typography gutterBottom>
+                      8.00-8.40
+                    </Typography>
+                    <Typography gutterBottom>
+                      语文
+                    </Typography>
+                    <Typography gutterBottom>
+                      老师姓名
+                    </Typography>
+                  </li>
+                  <li className='active'>
+                    <Typography gutterBottom>
+                      第2节课
+                    </Typography>
+                    <Typography gutterBottom>
+                      8.00-8.40
+                    </Typography>
+                    <Typography gutterBottom>
+                      语文
+                    </Typography>
+                    <Typography gutterBottom>
+                      老师姓名
+                    </Typography>
+                  </li>
+                  <li>
+                    <Typography gutterBottom>
+                      第3节课
+                    </Typography>
+                    <Typography gutterBottom>
+                      8.00-8.40
+                    </Typography>
+                    <Typography gutterBottom>
+                      语文
+                    </Typography>
+                    <Typography gutterBottom>
+                      老师姓名
+                    </Typography>
+                  </li>
+                  <li>
+                    <Typography gutterBottom>
+                      第4节课
+                    </Typography>
+                    <Typography gutterBottom>
+                      8.00-8.40
+                    </Typography>
+                    <Typography gutterBottom>
+                      语文
+                    </Typography>
+                    <Typography gutterBottom>
+                      老师姓名
+                    </Typography>
+                  </li>
+                </ul>
+              </div>
             </div>
           </Grid>
-          <Grid item lg={2.5} md={3}>
-            <div className='slick progressHeight'>
+          <Grid sx={{ width: '20.81rem', borderRadius: '0.56rem' }}>
+            <div className='slick videoCall'>
 
             </div>
           </Grid>

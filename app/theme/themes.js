@@ -18,7 +18,7 @@ export const theme = createTheme({
 
 
     LinearProgress: {
-      main: '#00BAAD',
+      main: 'rgb(236, 56, 52)',
       light: '#00BAAD',
       dark: '#00BAAD'
     }

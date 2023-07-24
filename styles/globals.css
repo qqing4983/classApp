@@ -83,28 +83,79 @@ text-align: center
 } 
 
 
-body {
+/* body {
   height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
 .desktop {
   @apply bg-cover bg-no-repeat bg-center flex flex-col;
-  width: 75rem;
-  height: 42.18rem;
-  background: url(../public/homebg.jpg);
-  padding: 16px 13px 20px 22px;
+  width: 120rem;
+  /* height: 100vh; */
+  height: 67.5rem;
+  background: url(../public/homebg.png) no-repeat;
+  padding: 2.31rem 2.62rem 2.43rem 2.43rem;
+  background-attachment: fixed;
+  -moz-background-size: 100% 100%;
+  background-size: 100% 100%;
+  background-size: cover;
 }
 .h-footer{
-  height: 3.87rem;
+ width:35.25rem ;
+ height:5.81rem ;
+ border-radius: 1.25rem;
+ background-color: #faeaeb;
+ box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.15);
+ margin: 0 auto;
+ overflow: hidden;
+}
+.footerIcon{
+  height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.footerIcon li{
+  border-radius: 1.25rem;
+  width: 5.25rem;
+  height: 5.25rem;
+  cursor: pointer;
+}
+.footerIcon li:hover{
+  transform: scale(1.1);
+}
+/* .footerIcon li:nth-child(1){
+  background: url(../public/footer1.png) no-repeat;
+  background-size: cover;
+}
+.footerIcon li:nth-child(2){
+  background: url(../public/footer2.png) no-repeat;
+  background-size: cover;
+}
+.footerIcon li:nth-child(3){
+  background: url(../public/footer3.png) no-repeat;
+  background-size: cover;
+}
+.footerIcon li:nth-child(4){
+  background: url(../public/footer4.png) no-repeat;
+  background-size: cover;
+}
+.footerIcon li:nth-child(5){
+  background: url(../public/footer5.png) no-repeat;
+  background-size: cover;
+} */
+.h-nav{
+  height: 5.12rem;
 }
 .bg-gradient {
   background: linear-gradient(#e66465, #9198e5);
 }
-.container{
+.container1{
   @apply flex-1 overflow-hidden ;
 }
 .weather{
@@ -114,29 +165,23 @@ body {
 .classInformation{
   @apply flex justify-between;
   font-size: 0.875rem;
-  height: 7.37rem;
+  height: 12rem;
   color: rgba(80, 80, 80, 1);
 	background-color: rgba(255, 255, 255, 0.75);
-	border-radius: 9px;
+	border-radius:0.56rem;
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.06428571428571431);
   background-color: rgba(255, 255, 255, 0.75);
   margin-bottom: 17px;
-  padding: 13px 16px 11px 18px;
-}
-.classInformation_left{
-
-  
+  padding: 1.8rem 1.75rem 0.68rem 1.31rem;
 }
 .classInformation_right{
-  width: 70px;
-	height: 92px;
-	color: rgba(255, 255, 255, 1);
-	background-color: rgba(56, 56, 56, 1);
-	border-radius: 9px;
+  width: 10.06rem;
+	height: 9.73rem;
+	border-radius: 0.56rem;
 
 }
 .safflowerRanking{
-  height: 13.62rem;
+  height: 20.29rem;
 	color: rgba(80, 80, 80, 1);
 	background-color: rgba(255, 255, 255, 0.75);
 	border-radius: 9px;
@@ -145,22 +190,27 @@ body {
   background-color: rgba(255, 255, 255, 0.75);
   padding: 11px 22px 14px 18px;
 }
-.safflowerRankingList{
-
+.safflowerRankingList li,.commuteText{
+  font-size: 1.5rem;
+  color: rgb(60, 60, 60);
 }
 .slick{
   @apply p-5 h-full;
   color: rgba(80, 80, 80, 1);
 	background-color: rgba(255, 255, 255, 0.75);
-	border-radius: 9px;
+	border-radius: 0.56rem;
 	font-size: 0.875rem;
 	box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.06428571428571431);
 }
 .slick .slick-dots{
-  bottom: -13.5%
+  bottom: -8.5%
 }
 .SliderImg{
-  height: 16.87rem;
+  height: 28.18rem;
+}
+.informationText{
+  @apply text-neutral-500 overflow-hidden text-ellipsis whitespace-nowrap  text-xl;
+  width: 12.5rem;
 }
 .logout{
   @apply text-center;
@@ -168,13 +218,50 @@ body {
 	height: 443px;
 	color: rgba(80, 80, 80, 1);
 	background-color: rgba(255, 255, 255, 0.75);
-	border-radius: 9px;
+	border-radius: 0.56rem;
 	font-size: 0.875rem;
 	box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.06428571428571431);	
 }
-.informationList li{
-  
+.informationList {
+    /* display: flex; */
 }
-.progressHeight{
-  height: 6.43rem;
+.course{
+  padding: 1rem 0 1rem 1.12rem ;
 }
+.courseLeft{
+  width: 15.31rem;
+}
+.courseRight{
+  scrollbar-width: none; /* firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+.courseList {
+  width: 44.93rem;
+
+  margin-left: 1.37rem;
+}
+.courseRight::-webkit-scrollbar {
+  display: none; /* Chrome Safari */
+}
+.courseList li{
+  width:11.81rem;
+  height: 9.12rem;
+  border-radius: 0.625rem;
+  border-color: rgb(200, 200, 200);
+  background-color: rgb(255, 255, 255);
+  margin-right: 1rem;
+  padding: 0.75rem 0 0.93rem 0.93rem;
+}
+.active{
+border:1px solid red!important;
+background-color: rgb(254, 244, 242)!important;
+}
+.videoCall{
+  background: url(../public/videoCall.png) no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+
+
