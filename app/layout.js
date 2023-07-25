@@ -9,8 +9,11 @@ import {theme} from './theme/themes'
 import { ThemeProvider, CssBaseline, Switch, FormControlLabel } from "@mui/material";
 import {resizeListener} from '@utils/rem.js'
 import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation'
 export default function RootLayout({ children }) {
+  const pathname = usePathname()
   useEffect(() => {
+    console.log(pathname,'pathname')
     resizeListener()
     window.addEventListener('resize', resizeListener);
     return () => window.removeEventListener('resize', resizeListener);
@@ -29,11 +32,11 @@ export default function RootLayout({ children }) {
         <body className={inter.className} id="__next">
           <CssBaseline />
           <div className="desktop">
-            <Nav />
+           {pathname!='/logIn'&&<Nav />} 
             <div className='container1'>
               {children}
             </div>
-            <Footer />
+            {pathname!='/logIn'&&<Footer />}
           </div>
 
         </body>

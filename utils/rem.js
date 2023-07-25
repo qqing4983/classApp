@@ -10,7 +10,7 @@ export function resizeListener (){
     // html 的fontsize 大小
     let htmlRem = (clientW * 16) / designSize;
     html.style.fontSize = htmlRem + 'px';
-    console.log(clientW,'clientW',clienH,'clienH')
-    console.log(htmlRem);
+    // console.log(clientW,'clientW',clienH,'clienH')
+    // console.log(htmlRem);
 }
 

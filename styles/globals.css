@@ -214,13 +214,18 @@ text-align: center
 }
 .logout{
   @apply text-center;
-  width: 1010px;
-	height: 443px;
+  width: 88.62rem;
+	height: 46.87rem;
 	color: rgba(80, 80, 80, 1);
-	background-color: rgba(255, 255, 255, 0.75);
-	border-radius: 0.56rem;
+  background-color: #fcf8f7;
+	border-radius: 1.25rem;
 	font-size: 0.875rem;
-	box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.06428571428571431);	
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
+}
+.logoutImg{
+  width:12.5rem;
+  height:12.5rem;
+  margin-top:3.12rem
 }
 .informationList {
     /* display: flex; */
@@ -263,5 +268,9 @@ background-color: rgb(254, 244, 242)!important;
   background-size: cover;
   cursor: pointer;
 }
-
+.logoImg{
+  width: 6.37rem;
+  height: 6.37rem;
+  margin-top: 4rem;
+}
 
