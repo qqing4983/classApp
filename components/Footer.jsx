@@ -31,7 +31,7 @@ const Footer = () => {
           <Image src={footer4} alt="classIcon" sx={{ width: '5.25rem', height: '5.25rem' }} />
         </li>
         </Link>
-        <Link href="/mine"> 
+        <Link href="/mine/videoCall"> 
         <li className='pt-1'>
           <Image src={footer5} alt="classIcon" sx={{ width: '5.25rem', height: '5.25rem' }} />
         </li>
