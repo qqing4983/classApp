@@ -21,36 +21,36 @@ const page = () => {
     <div className='flex'>
       <div className="mineCard">
         <Avatar alt="Avatar" src="/Avatar.png" sx={{ width: '8.06rem', height: '8.06rem', marginTop: '3.25rem' }} />
-        <Typography variant="h5" gutterBottom sx={{ fontSize: '1.875rem', marginTop: '2.43rem', marginBottom: '1.75rem' }}>家长姓名</Typography>
+        <Typography variant="h5"  sx={{ fontSize: '1.875rem', marginTop: '2.43rem', marginBottom: '1.75rem' }}>家长姓名</Typography>
         <span className='Label'>妈妈</span>
         <div className='CallTime'>
           <div className='CallTimeLeft'>
             <Typography variant="h5"
-              gutterBottom sx={{ fontSize: '3rem', color: 'rgb(68, 68, 68)', textAlign: 'right' }}>15<span className='text-lg'>&nbsp;次</span></Typography>
-            <Typography variant="h5" gutterBottom sx={{ fontSize: '1.875rem', marginTop: '1.25rem', textAlign: 'right' }}>累计通话</Typography>
+               sx={{ fontSize: '3rem', color: 'rgb(68, 68, 68)', textAlign: 'right' }}>15<span className='text-lg'>&nbsp;次</span></Typography>
+            <Typography variant="h5"  sx={{ fontSize: '1.875rem', marginTop: '1.25rem', textAlign: 'right' }}>累计通话</Typography>
           </div>
           <div className='CallTimeRight'>
             <Typography variant="h5"
-              gutterBottom sx={{ fontSize: '3rem', color: 'rgb(68, 68, 68)', textAlign: 'right' }}>30<span className='text-lg'>&nbsp;分钟</span></Typography>
-            <Typography variant="h5" gutterBottom sx={{ fontSize: '1.875rem', marginTop: '1.25rem', textAlign: 'right' }}>通话时长</Typography>
+               sx={{ fontSize: '3rem', color: 'rgb(68, 68, 68)', textAlign: 'right' }}>30<span className='text-lg'>&nbsp;分钟</span></Typography>
+            <Typography variant="h5"  sx={{ fontSize: '1.875rem', marginTop: '1.25rem', textAlign: 'right' }}>通话时长</Typography>
           </div>
         </div>
          <ColorButton variant="contained">开启视频通话</ColorButton>
       </div>
       <div className="mineCard">
         <Avatar alt="Avatar" src="/Avatar.png" sx={{ width: '8.06rem', height: '8.06rem', marginTop: '3.25rem' }} />
-        <Typography variant="h5" gutterBottom sx={{ fontSize: '1.875rem', marginTop: '2.43rem', marginBottom: '1.75rem' }}>家长姓名</Typography>
+        <Typography variant="h5"  sx={{ fontSize: '1.875rem', marginTop: '2.43rem', marginBottom: '1.75rem' }}>家长姓名</Typography>
         <span className='Label'>爸爸</span>
         <div className='CallTime'>
           <div className='CallTimeLeft'>
             <Typography variant="h5"
-              gutterBottom sx={{ fontSize: '3rem', color: 'rgb(68, 68, 68)', textAlign: 'right' }}>2<span className='text-lg'>&nbsp;次</span></Typography>
-            <Typography variant="h5" gutterBottom sx={{ fontSize: '1.875rem', marginTop: '1.25rem', textAlign: 'right' }}>累计通话</Typography>
+               sx={{ fontSize: '3rem', color: 'rgb(68, 68, 68)', textAlign: 'right' }}>2<span className='text-lg'>&nbsp;次</span></Typography>
+            <Typography variant="h5"  sx={{ fontSize: '1.875rem', marginTop: '1.25rem', textAlign: 'right' }}>累计通话</Typography>
           </div>
           <div className='CallTimeRight'>
             <Typography variant="h5"
-              gutterBottom sx={{ fontSize: '3rem', color: 'rgb(68, 68, 68)', textAlign: 'right' }}>6<span className='text-lg'>&nbsp;分钟</span></Typography>
-            <Typography variant="h5" gutterBottom sx={{ fontSize: '1.875rem', marginTop: '1.25rem', textAlign: 'right' }}>通话时长</Typography>
+               sx={{ fontSize: '3rem', color: 'rgb(68, 68, 68)', textAlign: 'right' }}>6<span className='text-lg'>&nbsp;分钟</span></Typography>
+            <Typography variant="h5"  sx={{ fontSize: '1.875rem', marginTop: '1.25rem', textAlign: 'right' }}>通话时长</Typography>
           </div>
         </div>
         <ColorButton variant="contained">开启视频通话</ColorButton>

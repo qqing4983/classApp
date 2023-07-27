@@ -10,11 +10,11 @@ const page = () => {
         <div className='w-full h-full flex justify-center items-center'>
             <div className='logout'>
 
-                <Typography variant="h6" gutterBottom sx={{ fontWeight: 'bold', marginTop: '3rem',fontSize:'2.75rem',color: 'rgb(60, 60, 60)' }}>
+                <Typography variant="h6"  sx={{ fontWeight: 'bold', marginTop: '3rem',fontSize:'2.75rem',color: 'rgb(60, 60, 60)' }}>
                     解除绑定
                 </Typography>
                 <Image src={logout} alt="flower" className="logoutImg" />
-                <Typography variant="h6" gutterBottom sx={{  marginTop: '2.37rem' }}>
+                <Typography variant="h6"  sx={{  marginTop: '2.37rem' }}>
                     请学校管理员或班主任微信扫一扫<br />
                     在微信小程序进行操作
                 </Typography>

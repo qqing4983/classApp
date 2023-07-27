@@ -6,9 +6,9 @@ import Footer from '@components/Footer';
 const inter = Inter({ subsets: ['latin'] })
 import { Providers } from '@/redux/providers'
 import {theme} from './theme/themes'
-import { ThemeProvider, CssBaseline, Switch, FormControlLabel } from "@mui/material";
+import { ThemeProvider, CssBaseline, } from "@mui/material";
 import {resizeListener} from '@utils/rem.js'
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { usePathname } from 'next/navigation'
 export default function RootLayout({ children }) {
   const pathname = usePathname()

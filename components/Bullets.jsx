@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect, useState } from 'react';
 import BulletScreen, { StyledBullet } from 'rc-bullets';
-
+const headUrl='https://zerosoul.github.io/rc-bullets/assets/img/heads/girl.jpg';
 const Bullets = () => {
     const [screen, setScreen] = useState(null);
     const [bullet, setBullet] = useState(['张三爸爸：老师辛苦啦！', '李老师：同学们比我想像的更棒', '罗红：就差一点，我也能拿奖！', '王六爷爷：你们太帅了！', '李四妈妈：孩子们真棒！']);
@@ -13,12 +13,19 @@ const Bullets = () => {
 
         function addBulletWithRAF() {
             if (index < bullet.length) {
-                s.push(bullet[index]);
+                // s.push(bullet[index]);
+                s.push(
+                    <StyledBullet
+                    head={headUrl}
+                    msg={bullet[index]}
+                    backgroundColor={'rgb(0, 0, 0,0.302)'}
+                    size='small'
+                  />
+                )
                 index++;
                 requestAnimationFrame(addBulletWithRAF);
             }
-        }
-
+        } 
         addBulletWithRAF();
     }, []);
     return (

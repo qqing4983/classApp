@@ -8,25 +8,30 @@ import message from '@public/message.svg'
 import Link from 'next/link';
 import videoActive from '@public/videoActive.png'
 import messageActive from '@public/messageActive.png'
+function iSSoundMuleDetail1(str='/') {
+  const keyword = '/mine/SoundMule';
+  return str.includes(keyword) && str !== keyword;
+}
 export default function RootLayout({
   children,
 }) {
   const pathname = usePathname()
+  // const iSSoundMuleDetail=iSSoundMuleDetail1(pathname)
   return (
     <main className='flex'>
       <div className="mineCard">
         <Avatar alt="Avatar" src="/Avatar.png" sx={{ width: '8.06rem', height: '8.06rem', marginTop: '3.25rem' }} />
-        <Typography variant="h5" gutterBottom sx={{ fontSize: '1.875rem', marginTop: '2.43rem', marginBottom: '6.25rem' }}>姓名</Typography>
-        <Link href="/mine/videoCall">
+        <Typography variant="h5"  sx={{ fontSize: '1.875rem', marginTop: '2.43rem', marginBottom: '6.25rem' }}>姓名</Typography>
+       <Link href="/mine/videoCall">
           <div className={`mineButton ${pathname == '/mine/videoCall' ? 'videoCallActive' : ''}`}>
             <Image src={pathname == '/mine/videoCall' ? videoActive : videoIcon} alt="videoIcon" sx={{ width: '2.12rem', height: '2.37rem', marginTop: '-1rem' }} />
-            <Typography variant="h5" gutterBottom sx={{ fontSize: '1.875rem', marginBottom: '0' }}>视频通话</Typography>
+            <Typography variant="h5"  sx={{ fontSize: '1.875rem', marginBottom: '0' }}>视频通话</Typography>
           </div>
         </Link>
         <Link href="/mine/SoundMule">
           <div className={`mineButton ${pathname == '/mine/SoundMule' ? 'SoundMuleActive' : ''}`}>
             <Image src={pathname == '/mine/SoundMule' ?messageActive:message} alt="message" sx={{ width: '4.18rem', height: '3.81rem', marginTop: '-1rem' }} />
-            <Typography variant="h5" gutterBottom sx={{ fontSize: '1.875rem', marginBottom: '0' }}>传音螺</Typography>
+            <Typography variant="h5"  sx={{ fontSize: '1.875rem', marginBottom: '0' }}>传音螺</Typography>
           </div>
         </Link>
       </div>
