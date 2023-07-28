@@ -121,7 +121,7 @@ const Home = () => {
         <Grid container >
           <Grid sx={{ width: '30.43rem', borderRadius: '0.56rem' }}>
             <div className='slick  '>
-              <Typography variant="h5"  sx={{ fontSize: '1.875rem', marginBottom: '1.25rem', display: 'flex', alignItems: 'center' }}>
+              <Typography variant="h5" sx={{ fontSize: '1.875rem', marginBottom: '1.25rem', display: 'flex', alignItems: 'center' }}>
                 <Image src={commuteIcon} alt="flower" className="h-6 w-6 mr-2.5" />今日通勤率
               </Typography>
               <LinearWithValueLabel />

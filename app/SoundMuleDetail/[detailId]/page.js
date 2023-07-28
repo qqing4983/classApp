@@ -28,7 +28,7 @@ const page = ({ params: { detailId } }) => {
       setOpen(true);
       return
     }
-    if (message.length < 60) {
+    if (message < 60) {
 
     }
     else {
