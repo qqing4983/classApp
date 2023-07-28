@@ -24,7 +24,12 @@ const page = ({ params: { detailId } }) => {
     setMessage(e.target.value)
   }
   function sendMessage() {
-    if (message < 60) {
+    if (!message) {
+      setOpen(true);
+      return
+    }
+    if (message.length < 60) {
+
     }
     else {
       setOpen(true);
@@ -36,10 +41,12 @@ const page = ({ params: { detailId } }) => {
         <Avatar alt="Avatar" src="/Avatar.png" sx={{ width: '8.06rem', height: '8.06rem', marginTop: '3.25rem' }} />
         <Typography variant="h5" sx={{ fontSize: '1.875rem', marginTop: '2.43rem', }}>姓名</Typography>
         <Typography variant="h5"
-          sx={{ marginTop: '6.5rem', fontSize: '3rem' }}>
+          sx={{ marginTop: '6.5rem', fontSize: '3rem', color: 'rgb(68, 68, 68)' }}>
           256次
         </Typography>
-        <Typography variant="h5" sx={{ fontSize: '1.875rem', marginTop: '0.65rem', }}>累计与妈妈对话</Typography>
+
+
+        <Typography variant="h5" sx={{ fontSize: '1.875rem', marginTop: '2.62rem', }}>累计与妈妈对话</Typography>
       </div>
       <div className='messageBoard flex flex-col'>
         <div className='grow overflow-y-auto'>
@@ -72,14 +79,13 @@ const page = ({ params: { detailId } }) => {
         <div className='relative'>
           <CustomInput aria-label="Demo input" placeholder="请在此输入留言内容，60个字以内" onChange={CustomInputonChange} />
           <ColorButton variant="contained" endIcon={<SendIcon sx={{ fontSize: '2rem!important' }} />} onClick={sendMessage}>发送</ColorButton>
-
         </div>
       </div>
       <Snackbar
         anchorOrigin={{ horizontal: 'center', vertical: 'top' }}
         open={open}
         onClose={handleClose}
-        message="请输入留言内容，60个字以内"
+        message={message ? "请输入留言内容，60个字以内" : "请输入留言内容"}
         key='centertop'
       />
     </main>
@@ -135,7 +141,6 @@ const StyledInputElement = styled('input')(
   &:hover {
     border-color: ${blue[400]};
   }
-
   &:focus {
     border-color: ${blue[400]};
     box-shadow: 0 0 0 3px ${theme.palette.mode === 'dark' ? blue[500] : blue[200]};

@@ -32,7 +32,7 @@ export default function LinearWithValueLabel() {
   const [progress, setProgress] = React.useState(96);
 
   React.useEffect(() => {
-  
+    
   }, []);
 
   return (

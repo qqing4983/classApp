@@ -13,27 +13,28 @@ const Footer = () => {
       <ul className='footerIcon'>
       <Link href="/"> 
       <li className='pt-1.5'>
-          <Image src={footer1} alt="classIcon" sx={{ width: '5.25rem', height: '5.25rem' }} />
+      {/* className="footerImg" */}
+          <Image src={footer1} alt="footer1"  />
         </li>
        </Link>
        <Link href="#"> 
         <li>
-          <Image src={footer2} alt="classIcon" sx={{ width: '5.25rem', height: '5.25rem' }} />
+          <Image src={footer2} alt="footer2"   />
         </li>
         </Link>
         <Link href="#"> 
         <li className='pt-1.5'>
-          <Image src={footer3} alt="classIcon" sx={{ width: '5.25rem', height: '5.25rem' }} />
+          <Image src={footer3} alt="footer3"   />
         </li>
         </Link>
         <Link href="#"> 
         <li className='pt-1.5'>
-          <Image src={footer4} alt="classIcon" sx={{ width: '5.25rem', height: '5.25rem' }} />
+          <Image src={footer4} alt="footer4"  />
         </li>
         </Link>
         <Link href="/mine/videoCall"> 
         <li className='pt-1'>
-          <Image src={footer5} alt="classIcon" sx={{ width: '5.25rem', height: '5.25rem' }} />
+          <Image src={footer5} alt="footer5" />
         </li>
         </Link>
       </ul>

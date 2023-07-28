@@ -127,9 +127,8 @@ textarea {
   background: url(../public/homebg.png) no-repeat;
   padding: 2.31rem 2.62rem 2.43rem 2.43rem;
   background-attachment: fixed;
-  -moz-background-size: 100% 100%;
-  background-size: 100% 100%;
   background-size: cover;
+  background-position: center center;
 }
 
 .h-footer {
@@ -143,7 +142,7 @@ textarea {
 }
 
 .footerIcon {
-  height: 100%;
+  /* height: 100%; */
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -217,7 +216,10 @@ textarea {
   border-radius: 0.56rem;
 
 }
-
+.footerImg{
+  width: 5.25rem;
+  height: 5.25rem;
+}
 .safflowerRanking {
   height: 20.29rem;
   color: rgba(80, 80, 80, 1);
@@ -433,3 +435,12 @@ border-radius: 0.62rem;
 .timeMargin{
   margin-right: 2.12rem;
 }
+.faceAuthenticationframe{
+  width: 24.87rem;
+  height: 24.87rem;
+  border-radius: 50%;
+  border:0.62rem solid rgb(60, 60, 60,0.6);
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.15);
+  margin: 3rem auto 0 auto;
+}
+
